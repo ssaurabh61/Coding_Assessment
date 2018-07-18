@@ -1,0 +1,18 @@
+server:
+  port: 7000
+
+spring:
+  main:
+    banner-mode: "off"
+  datasource:
+    url: "jdbc:h2:~/database/atmdb;AUTO_SERVER=true;DB_CLOSE_ON_EXIT=FALSE"
+    driverClassName: "org.h2.Driver"
+
+logging:
+  level:
+    ROOT: ERROR
+    org.springframework: INFO
+    com.mybank: INFO
+
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
